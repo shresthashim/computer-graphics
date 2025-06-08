@@ -1,0 +1,14 @@
+# Ignore executable files
+*.exe
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore debug files
+*.pdb
+
+# Ignore build folders (e.g., VSCode or custom output)
+build/
+out/
+bin/
