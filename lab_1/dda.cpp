@@ -1,3 +1,5 @@
+// DDA Line Drawing Algorithm in C++
+
 #include <iostream>
 #include <cmath>
 #include <graphics.h>
