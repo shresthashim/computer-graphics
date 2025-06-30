@@ -7,6 +7,7 @@ int main()
     int gd = DETECT, gm;
     int i, maxx, midy;
 
+    
     /* initialize graphic mode */
     initgraph(&gd, &gm, "X:\\TC\\BGI");
     /* maximum pixel in horizontal axis */
