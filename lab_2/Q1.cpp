@@ -1,4 +1,4 @@
-// Bresenham's Line Drawing Algorithm in C++
+// Bresenham's Line Drawing Algorithm in C++ with Coordinate Output
 
 #include <iostream>
 #include <graphics.h>
@@ -52,12 +52,13 @@ int main()
     x = x1;
     y = y1;
 
+    drawPixelCartesian(x, y, WHITE); // Draw initial point
+    cout << "Point: (" << x << ", " << y << ")  p = Not Applicable (start point)" << endl;
+
     // Choose which algorithm to use based on slope
     if (dx > dy)
     {
-        // When |dx| > |dy| - increment along x-axis
         p = 2 * dy - dx;
-
         for (i = 0; i < dx; i++)
         {
             if (p < 0)
@@ -72,14 +73,13 @@ int main()
                 p += 2 * (dy - dx);
             }
             drawPixelCartesian(x, y, WHITE);
+            cout << "Point: (" << x << ", " << y << ")  p = " << p << endl;
             delay(10);
         }
     }
     else
     {
-        // When |dy| >= |dx| - increment along y-axis
         p = 2 * dx - dy;
-
         for (i = 0; i < dy; i++)
         {
             if (p < 0)
@@ -94,6 +94,7 @@ int main()
                 p += 2 * (dx - dy);
             }
             drawPixelCartesian(x, y, WHITE);
+            cout << "Point: (" << x << ", " << y << ")  p = " << p << endl;
             delay(10);
         }
     }
@@ -101,3 +102,4 @@ int main()
     getch();
     closegraph();
     return 0;
+}
