@@ -55,7 +55,7 @@ int main()
     drawPixelCartesian(x, y, WHITE); // Draw initial point
     cout << "Point: (" << x << ", " << y << ")  p = Not Applicable (start point)" << endl;
 
-    // Choose which algorithm to use based on slope
+    // Choose which algorithm to use based on slope 
     if (dx > dy)
     {
         p = 2 * dy - dx;
