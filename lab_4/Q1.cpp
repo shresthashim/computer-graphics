@@ -18,7 +18,7 @@ struct Point
 
 void drawTriangle(Point p1, Point p2, Point p3, int color = WHITE)
 {
-    setcolor(color);
+    setcolor(color);    q   78
     // Convert Cartesian coordinates to screen coordinates
     line(originX + p1.x, originY - p1.y, originX + p2.x, originY - p2.y);
     line(originX + p2.x, originY - p2.y, originX + p3.x, originY - p3.y);
