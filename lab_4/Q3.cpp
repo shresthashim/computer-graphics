@@ -61,9 +61,14 @@ int main()
     float sx, sy;
 
     // Step 1: Get triangle input and draw immediately
-    cout << "Enter triangle vertices (x1 y1 x2 y2 x3 y3): ";
-    cin >> p1.x >> p1.y >> p2.x >> p2.y >> p3.x >> p3.y;
-
+    // cout << "Enter triangle vertices (x1 y1 x2 y2 x3 y3): ";
+    // cin >> p1.x >> p1.y >> p2.x >> p2.y >> p3.x >> p3.y;
+    p1.x = 100;
+    p1.y = 0;
+    p2.x = 0;
+    p2.y = 100;
+    p3.x = 100;
+    p3.y = 100;
     drawTriangle(p1, p2, p3, WHITE);
     outtextxy(10, 10, "Original triangle drawn");
 

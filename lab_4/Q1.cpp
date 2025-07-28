@@ -5,17 +5,19 @@ using namespace std;
 int maxX, maxY;
 int originX, originY;
 
-
-void drawAxes() {
+void drawAxes()
+{
     line(0, originY, maxX, originY); // X-axis
     line(originX, 0, originX, maxY); // Y-axis
 }
 
-struct Point {
+struct Point
+{
     int x, y;
 };
 
-void drawTriangle(Point p1, Point p2, Point p3, int color = WHITE) {
+void drawTriangle(Point p1, Point p2, Point p3, int color = WHITE)
+{
     setcolor(color);
     // Convert Cartesian coordinates to screen coordinates
     line(originX + p1.x, originY - p1.y, originX + p2.x, originY - p2.y);
@@ -23,12 +25,14 @@ void drawTriangle(Point p1, Point p2, Point p3, int color = WHITE) {
     line(originX + p3.x, originY - p3.y, originX + p1.x, originY - p1.y);
 }
 
-void translate(Point &p, int dx, int dy) {
+void translate(Point &p, int dx, int dy)
+{
     p.x += dx;
     p.y += dy;
 }
 
-int main() {
+int main()
+{
     int gd = DETECT, gm;
     initgraph(&gd, &gm, "");
 
@@ -38,10 +42,16 @@ int main() {
     originY = maxY / 2;
     drawAxes();
 
-
     Point p1, p2, p3;
-    cout << "Enter triangle vertices (x1 y1 x2 y2 x3 y3): ";
-    cin >> p1.x >> p1.y >> p2.x >> p2.y >> p3.x >> p3.y;
+    // cout << "Enter triangle vertices (x1 y1 x2 y2 x3 y3): ";
+    // cin >> p1.x >> p1.y >> p2.x >> p2.y >> p3.x >> p3.y;
+
+    p1.x = 100;
+    p1.y = 0;
+    p2.x = 0;
+    p2.y = 100;
+    p3.x = 100;
+    p3.y = 100;
 
     drawTriangle(p1, p2, p3);
 
